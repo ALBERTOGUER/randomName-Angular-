@@ -1,0 +1,66 @@
+<button class="contenedor" (keypress)="getiinfo($event)" disabled>
+  <div id="header">
+    <div id="groupParent">
+      <div id="groupFamily1">
+        <button type="button" autofocus (click)="parametro='random'" class="spanIcon spanIcono"><img
+            src="./../../../assets/img/shuffle-mode-arrows.png" alt=""></button>
+        <button class="spanIcon  marginLeft spanIcono" (click)="parametro='male'"><img
+            src="./../../../assets/img/masc.png" alt=""></button>
+        <button class="spanIcon marginLeft spanIcono" (click)="parametro='female'"><img
+            src="./../../../assets/img/female.png" alt=""></button>
+      </div>
+
+      <div id="groupFamily2">
+
+        <button class="spanIcon" id="flag">
+          <div id="recorte"> <img src="https://uinames.com/assets/img/flag-random.gif" alt=""></div>
+        </button>
+      </div>
+      <div id="groupFamily3">
+
+        <button class="spanIcon"><img src="./../../../assets/img/box.png" alt=""></button>
+      </div>
+    </div>
+    <button class="spanIcon"><img src="./../../../assets/img/menu-button.png" alt=""></button>
+  </div>
+
+
+  <div id="api">
+    <div id="contenedorInicio" *ngIf="valor == true">
+      <p id="parra">
+        Press Spacebar
+      </p>
+      <p id="share" >Share = ❤️</p>
+    </div>
+    <div *ngIf="valor == false" id="info">
+      <div> <img [src]="newPerson.photo" alt="" id="foto"></div>
+      <h1>{{newPerson.name}}</h1>
+
+      <div id="info_data">
+        <ul>
+          <li>👤 {{newPerson.name}}</li>
+          <li>🌐 {{newPerson.region}}</li>
+          <li>📞 {{newPerson.phone}}</li>
+          <li>🎂 {{newPerson.birthday.dmy}}</li>
+          <li>✉️ {{newPerson.email}}</li>
+          <li>🔑 {{newPerson.password}}</li>
+        </ul>
+      </div>
+
+      
+
+    </div>
+
+
+  </div>
+
+  <div class="footer">
+    <div class="contenedorIcon" id="tweet"><img src="./../../../assets/img/icon.png" alt="">Tweet</div>
+   < <div class="like">2.1k</div>
+    <div class="contenedorIcon" id="face"><img src="./../../../assets/img/facebook-logo.png" alt="">Share</div>
+   < <div class="like">1.7k</div>
+    <div class="contenedorIcon" id="git" style="color:#333333;font-weight:bold"><img src="./../../../assets/img/github-logo.png" alt="">&nbsp; Star</div>
+    <<div class="like">0.5k</div>
+  </div>
+
+</button>
