@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { PrincipalComponent } from './components/principal/principal.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpacebarpressDirective } from './directive/spacebarpress.directive';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SpacebarpressDirective } from './directive/spacebarpress.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SweetAlert2Module
     
   ],
   providers: [],

@@ -210,13 +210,12 @@ ul {
   font-size: 15px;
   margin-top: 210px;
   font-weight: lighter;
-  color: ;
+  
 }
 
 #contenedorInicio{
   height: 350px;
   display: flex;
   flex-direction: column;
-  /* justify-content: sp; */
   padding-top: 255px;
 }

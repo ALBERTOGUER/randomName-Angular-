@@ -1,4 +1,4 @@
-<button class="contenedor" (keypress)="getiinfo($event)" disabled>
+<button class="contenedor" (keypress)="getiinfo($event)" [ngStyle]="{background: color}" >
   <div id="header">
     <div id="groupParent">
       <div id="groupFamily1">
@@ -12,9 +12,9 @@
 
       <div id="groupFamily2">
 
-        <button class="spanIcon" id="flag">
+        <div class="spanIcon" id="flag" (click)="flags()">
           <div id="recorte"> <img src="https://uinames.com/assets/img/flag-random.gif" alt=""></div>
-        </button>
+        </div>
       </div>
       <div id="groupFamily3">
 
@@ -36,7 +36,7 @@
       <div> <img [src]="newPerson.photo" alt="" id="foto"></div>
       <h1>{{newPerson.name}}</h1>
 
-      <div id="info_data">
+      <div id="info_data" [ngStyle]="{background: color}">
         <ul>
           <li>👤 {{newPerson.name}}</li>
           <li>🌐 {{newPerson.region}}</li>
@@ -45,9 +45,11 @@
           <li>✉️ {{newPerson.email}}</li>
           <li>🔑 {{newPerson.password}}</li>
         </ul>
+
+       
       </div>
 
-      
+
 
     </div>
 

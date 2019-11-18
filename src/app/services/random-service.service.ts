@@ -8,21 +8,39 @@ export class RandomServiceService {
 
   constructor(private http: HttpClient) {}
 
-  private url: string = "https://uinames.com/api/?amount=1&ext";
-
+  
+  
+  
+  public Personas(parametro, pais) {
+    
+    let url: string = "https://uinames.com/api/?amount=1&ext";
+    
     
 
-  public Personas(parametro) {
+    if(parametro == 'random' && pais == null){
 
-    // console.log('x');
-    console.log(parametro);
+      url=url;
+    }
+    else if(parametro == 'random' && pais != null){
 
-    if(parametro=='random'){
-    return this.http.get(`${this.url}`);
+      url=url+`&region=${pais}`
     }
-    else {
-      return this.http.get(`${this.url}&&gender=${parametro}`);
+   
+    else if(parametro != 'random' && pais == null){
+      url = url+`&gender=${parametro}`
     }
+
+    else if(parametro != 'random' && pais != null){
+      url = url+`&gender=${parametro}&region=${pais}`
+    }
+
+    
+    
+    url=encodeURI(url);
+    console.log(url);
+    
+    
+    return this.http.get(url);
     
     
 
